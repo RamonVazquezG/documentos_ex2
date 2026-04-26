@@ -14,7 +14,14 @@ const generarCURPLocal = (data: Partial<DocumentoData>): string => {
   const fecha = data.fechaNacimiento ? data.fechaNacimiento.replace(/-/g, '').substring(2) : 'XXXXXX';
   const sx = data.sexo || 'X';
   const est = data.estado ? data.estado.substring(0,2) : 'XX';
-  return `${aP}${aM}${n}${fecha}${sx}${est}XXX1`.toUpperCase();
+  // primeras consonantes del apellido paterno y materno que no son la primera letra
+  const cons = (str: string) => {
+    const match = str.substring(1).match(/[^AEIOU]/i);
+    return match ? match[0] : 'X';
+  };
+  const c1 = cons(data.apellidoPaterno || '');
+  const c2 = cons(data.apellidoMaterno || '');
+  return `${aP}${aM}${n}${fecha}${sx}${est}${c1}${c2}X1`.toUpperCase();
 };
 
 export function DocumentoCURP() {
