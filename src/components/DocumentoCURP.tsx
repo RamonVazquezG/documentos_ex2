@@ -1,6 +1,7 @@
 import { Fingerprint, Shield } from 'lucide-react';
 import { useAppStore } from '../store/store';
 import type { DocumentoData } from '../types/types';
+import escudo from '../assets/escudo-nacional.svg';
 
 const BARCODE_WIDTHS = Array.from({ length: 40 }, (_, i) => ((i * 7) % 5) + 1);
 
@@ -30,7 +31,7 @@ export function DocumentoCURP() {
             <h1 className="text-lg font-bold">Clave Única de Registro de Población</h1>
           </div>
         </div>
-        <img src="https://upload.wikimedia.org/wikipedia/commons/2/22/Escudo_Nacional_de_M%C3%A9xico.svg" alt="Escudo" className="w-12 h-12 opacity-80 brightness-0 invert" />
+        <img src={escudo} alt="Escudo" className="w-16 h-16" />
       </div>
 
       <div className="p-8 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] bg-emerald-50/30">

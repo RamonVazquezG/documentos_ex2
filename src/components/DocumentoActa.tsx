@@ -1,5 +1,6 @@
 import { Award, Stamp } from 'lucide-react';
 import { useAppStore } from '../store/store';
+import escudo from '../assets/escudo-nacional.svg';
 
 export function DocumentoActa() {
   // Solo leemos el estado global. ¡Gracias Zustand!
@@ -10,7 +11,7 @@ export function DocumentoActa() {
       <div className="absolute inset-0 opacity-5 pointer-events-none" style={{ backgroundImage: 'radial-gradient(#2C3E50 1px, transparent 1px)', backgroundSize: '20px 20px' }}></div>
       
       <div className="text-center mb-10 relative z-10 border-b-2 border-slate-800 pb-6">
-        <Award className="w-16 h-16 mx-auto text-amber-700 mb-4" />
+        <img src={escudo} alt="Escudo" className="w-24 h-auto mx-auto mb-4" />
         <h1 className="text-3xl font-bold uppercase tracking-widest text-[#2C3E50]">Estados Unidos Mexicanos</h1>
         <h2 className="text-xl tracking-wide mt-2">Registro Civil</h2>
         <h3 className="text-2xl font-bold mt-4 text-amber-800 uppercase">Acta de Nacimiento</h3>
