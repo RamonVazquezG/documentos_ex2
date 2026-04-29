@@ -24,7 +24,8 @@ const generarCURPLocal = (data: Partial<DocumentoData>): string => {
   };
   const c1 = cons(data.apellidoPaterno || '');
   const c2 = cons(data.apellidoMaterno || '');
-  return `${aP}${aM}${n}${fecha}${sx}${est}${c1}${c2}X1`.toUpperCase();
+  const cn = cons(data.nombres || '');
+  return `${aP}${aM}${n}${fecha}${sx}${est}${c1}${c2}${cn}X1`.toUpperCase();
 };
 
 export function DocumentoCURP() {

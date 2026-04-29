@@ -168,11 +168,12 @@ export function AboutPage() {
       <div className="bg-white border border-slate-200 rounded-xl p-6 shadow-sm">
         <div className="flex items-start justify-between gap-4 flex-col md:flex-row">
           <div>
-            <h2 className="text-xl font-bold text-slate-900">About: DOOM (WASM)</h2>
+            <h2 className="text-xl font-bold text-slate-900">Acerca de: Generador de Documentos + <span className="text-red-800">DOOM (WASM)</span></h2>
             <p className="text-slate-600 mt-1">
-              Esto ejecuta el motor en el navegador. Incluye un <span className="font-medium">WAD libre</span>{' '}
-              (Freedoom) para que arranque sin descargas.
-              <span className="block">Efectos de sonido: sí. Música: muda.</span>
+              El sistema de generación de documentos es una herramienta que te permite obtener tu curp y acta de nacimiento para
+              descargarlas en formato PDF. Sin embargo también puede ejecutar código WASM, así que puedes usar un pequeño emulador de DOOM 
+              basado en EmulatorJS, esto ejecuta el motor en el navegador. Incluye un <span className="font-medium">WAD libre</span>{' '}
+              (Freedoom) para jugar sin descargar nada, adicionalmente puedse agregar el que tu desees.
             </p>
           </div>
           <a
